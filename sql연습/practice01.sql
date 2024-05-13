@@ -75,7 +75,7 @@ select count(*)
     and to_date = '9999-01-01';
 
 --  문제11.
---  사번이 13250(Zeydy)인 직원이 직책 변경 상황을 시간 순으로 출력해보세요.
+--  사번이 13250(Zeydy)인 직원이 직책 변경 상황을 시간 순으로 출력해 보세요.
 select title
 	from titles
     where emp_no = 13250
