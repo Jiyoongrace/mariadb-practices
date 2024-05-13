@@ -65,9 +65,9 @@ select concat(first_name, ' ', last_name) as '이름',
 -- SQL 비교 연산자
 -- in 연산자
 -- 예제3: dept_emp 테이블에서 부서 번호가 d005나 d009에 속한 사원의 사번, 부서번호 출력
-select emp_no, dep_no
+select emp_no, dept_no
 	from dept_emp
-    where dep_no in('d005', 'doo9');
+    where dept_no in('d005', 'd009');
 
 -- Like 검색
 -- 예제4: employees 테이블에서 1989년에 입사한 직원의 이름, 입사일을 출력
