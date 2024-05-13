@@ -27,7 +27,7 @@ select count(*)
 	from employees
     where gender = 'm';
 
-select IF(gender='f', '여직원', '남직원') as '성별', count(gender) as '직원수'
+select IF(gender='f', '여직원', '남직원') as '성별', count(*) as '직원수'
 	from employees
     group by gender;
 
@@ -76,7 +76,7 @@ select count(*)
 
 --  문제11.
 --  사번이 13250(Zeydy)인 직원이 직책 변경 상황을 시간 순으로 출력해 보세요.
-select title
+select title, from_date, to_date
 	from titles
     where emp_no = 13250
     order by from_date;
