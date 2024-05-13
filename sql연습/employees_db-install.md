@@ -13,7 +13,7 @@ MariaDB [(none)]> flush privileges;
 2. upload employees_db.zip
 ```sh
 c:\ sftp jiyun@192.168.*.***
-sftp:/home/kickscar> put C:\poscodx2024\자료\employees_db.zip
+sftp:/home/jiyun> put C:\poscodx2024\자료\employees_db.zip
 exit
 open
 ```
