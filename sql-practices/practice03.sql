@@ -87,6 +87,8 @@ select a.dept_name, avg(c.salary)
 	from departments a, dept_emp b, salaries c
     where a.dept_no = b.dept_no
     and b.emp_no = c.emp_no
+	and b.to_date = '9999-01-01'
+    and c.to_date = '9999-01-01'
     group by a.dept_name
     order by avg(c.salary) desc;
 
@@ -96,5 +98,7 @@ select a.dept_name, avg(c.salary)
 select a.title, avg(b.salary)
 	from titles a, salaries b
     where a.emp_no = b.emp_no
+	and a.to_date = '9999-01-01'
+    and b.to_date = '9999-01-01'
     group by a.title
     order by avg(b.salary) desc;
