@@ -18,7 +18,7 @@ select a.emp_no, a.first_name, b.title
 
 -- 문제3.
 -- 전체 사원의 사번, 이름, 현재 부서를 이름 순서로 출력하세요.
-select a.emp_no, a.first_name, c.dept_name
+select a.emp_no, concat(a.first_name, ' ', a.last_name), c.dept_name
 	from employees a, dept_emp b, departments c
     where a.emp_no = b.emp_no
     and b.dept_no = c.dept_no
@@ -45,7 +45,7 @@ select a.emp_no, a.first_name
 	from employees a, titles b
     where a.emp_no = b.emp_no
     and b.title = 'Technique Leader'
-    and b.to_date != '9999-01-01';
+    and b.to_date <> '9999-01-01';
 
 -- 문제6.
 -- 직원 이름(last_name) 중에서 S(대문자)로 시작하는 직원들의 이름, 부서명, 직책을 조회하세요.

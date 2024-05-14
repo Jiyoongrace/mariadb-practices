@@ -11,14 +11,12 @@ select max(salary) as '최고임금',
 -- 문제2.
 -- 마지막으로 신입사원이 들어온 날은 언제 입니까? 다음 형식으로 출력해 주세요.
 -- 예) 2014년 07월 10일
-select max(hire_date)
-	from employees;
+select date_format(max(hire_date), '%Y년 %m월 %d일') from employees;
 
 -- 문제3.
 -- 가장 오래 근속한 직원의 입사일은 언제인가요? 다음 형식으로 출력해 주세요.
 -- 예) 2014년 07월 10일
-select date_format(hire_date, '%Y년 %m월 %d일'), max(period_diff(date_format(curdate(), '%Y%m'),
-				date_format(hire_date, '%Y%m')))
+select date_format(min(hire_date), '%Y년 %m월 %d일')
 	from employees;
 
 -- 문제4.
@@ -35,6 +33,6 @@ select max(salary), min(salary)
 
 -- 문제6.
 -- 최고 어린 사원의 나이와 최 연장자의 나이는?
-select concat(floor((min(period_diff(date_format(current_date(), '%Y%m'), date_format(birth_date, '%Y%m'))) / 12)), '살') as '어린 사원',
-	concat(floor((max(period_diff(date_format(current_date(), '%Y%m'), date_format(birth_date, '%Y%m'))) / 12)), '살') as '최 연장자'
-	from employees;
+select date_format(curdate(), '%Y') - date_format(max(birth_date), '%Y'),
+	   date_format(curdate(), '%Y') - date_format(min(birth_date), '%Y')
+	from employees;dd
