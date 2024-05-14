@@ -25,13 +25,13 @@ select avg(salary), sum(salary)
     where emp_no = 10060;
 
 -- 예제: 위 예제 직원의 최저 임금을 받은 시기와 최대 임금을 받은 시기를 각각 출력해 보세요.
-select min(salary), to_date as '최저 임금 날짜'
-	from salaries
-    where emp_no = 10060;
+-- select min(salary), to_date as '최저 임금 날짜'
+-- 	from salaries
+--     where emp_no = 10060;
 
-select max(salary), to_date as '최대 임금 날짜'
-	from salaries
-    where emp_no = 10060;
+-- select max(salary), to_date as '최대 임금 날짜'
+-- 	from salaries
+--     where emp_no = 10060;
 
 select salary, to_date
 	from salaries
