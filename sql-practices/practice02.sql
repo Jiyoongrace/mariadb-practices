@@ -24,12 +24,14 @@ select date_format(hire_date, '%Y년 %m월 %d일'), max(period_diff(date_format(
 -- 문제4.
 -- 현재 이 회사의 평균 연봉은 얼마입니까?
 select avg(salary)
-	from salaries;
+	from salaries
+    where to_date = '9999-01-01';
 
 -- 문제5.
 -- 현재 이 회사의 최고/최저 연봉은 얼마입니까?
 select max(salary), min(salary)
-	from salaries;
+	from salaries
+    where to_date = '9999-01-01';
 
 -- 문제6.
 -- 최고 어린 사원의 나이와 최 연장자의 나이는?
