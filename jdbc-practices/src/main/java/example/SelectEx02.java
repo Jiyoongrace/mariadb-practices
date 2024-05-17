@@ -2,7 +2,7 @@ package example;
 
 import java.sql.*;
 
-public class SelectEx02 {
+public class SelectEx02 { // PreparedStatement 적용
     public static void main(String[] args) {
         search("pat");
     }
