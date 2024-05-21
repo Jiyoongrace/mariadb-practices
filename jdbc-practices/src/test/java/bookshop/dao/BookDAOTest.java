@@ -1,7 +1,7 @@
 package bookshop.dao;
 
-import bookshop.vo.AuthorVO;
-import bookshop.vo.BookVO;
+import bookshop.vo.AuthorVo;
+import bookshop.vo.BookVo;
 import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -9,10 +9,10 @@ import static org.junit.jupiter.api.Assertions.*;
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class BookDAOTest {
     private static int count = 0;
-    private static AuthorVO mockAuthorVO = new AuthorVO();
-    private static BookVO mockBookVO = new BookVO();
+    private static AuthorVo mockAuthorVO = new AuthorVo();
+    private static BookVo mockBookVO = new BookVo();
 
-    private static AuthorDAO authorDAO = new AuthorDAO();
+    private static AuthorDao authorDAO = new AuthorDao();
     private static BookDAO bookDAO = new BookDAO();
 
     @BeforeAll
