@@ -5,8 +5,7 @@ import org.junit.jupiter.api.*;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class EmailListDAOTest {
@@ -26,8 +25,8 @@ public class EmailListDAOTest {
         vo.setLastName("리");
         vo.setEmail("dooly@gmail.com");
 
-        boolean result = new EmaillistDAO().insert(vo);
-        assertTrue(result);
+        new EmaillistDAO().insert(vo);
+        assertNotNull(vo.getNo());
     }
 
     @Test
