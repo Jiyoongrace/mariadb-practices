@@ -13,7 +13,7 @@ public class BookDAOTest {
     private static BookVo mockBookVO = new BookVo();
 
     private static AuthorDao authorDAO = new AuthorDao();
-    private static BookDAO bookDAO = new BookDAO();
+    private static BookDao bookDAO = new BookDao();
 
     @BeforeAll
     public static void setUp() {
