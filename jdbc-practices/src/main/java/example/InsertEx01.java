@@ -20,7 +20,7 @@ public class InsertEx01 {
             Class.forName("org.mariadb.jdbc.Driver");
 
             // 2. 연결하기
-            String url = "jdbc:mariadb://192.168.0.195:3306/webdb?charset=utf8";
+            String url = "jdbc:mariadb://localhost:3306/webdb?charset=utf8";
             connection = DriverManager.getConnection(url, "webdb", "webdb");
 
             // 3. Statement 생성하기
